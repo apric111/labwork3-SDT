@@ -1,0 +1,83 @@
+{
+  "name": "blocks-generator",
+  "displayName": "blocks-generator",
+  "description": "loop and conditional statement generator for C++",
+  "version": "0.0.1",
+  "engines": {
+      "vscode": "^1.105.0"
+  },
+  "categories": [
+      "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+  "commands": [
+    {
+      "command": "blocks-generator.if_gen",
+      "title": "if_gen"
+    },
+    {
+      "command": "blocks_generator.else_if_gen",
+      "title": "else_if_gen"
+    },
+    {
+      "command": "blocks_generator.else_gen",
+      "title": "else_gen"
+    },
+    {
+      "command": "blocks_generator.for_gen",
+      "title": "for_gen"
+    },
+    {
+      "command": "blocks_generator.while_gen",
+      "title": "while_gen"
+    }
+  ],
+  "keybindings": [
+    {
+      "command": "blocks-generator.if_gen",
+      "mac": "cmd+shift+9",
+      "win": "ctrl+shift+9",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "blocks_generator.else_if_gen",
+      "mac": "cmd+shift+8",
+      "win": "ctrl+shift+8",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "blocks_generator.else_gen",
+      "mac": "cmd+shift+7",
+      "win": "ctrl+shift+7",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "blocks_generator.for_gen",
+      "mac": "cmd+shift+0",
+      "win": "ctrl+shift+0",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "blocks_generator.while_gen",
+      "mac": "cmd+shift+2",
+      "win": "ctrl+shift+2",
+      "when": "editorTextFocus"
+    }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.36.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
