@@ -22,12 +22,7 @@ function activate(context) {
 		}
 		return count;
 	}
-	const editor = vscode.window.activeTextEditor;
-	if (!editor) {
-		return
-	}
 	let tab = "    ";
-
 	const if_gen = vscode.commands.registerCommand('blocks-generator.if_gen', function () {
 		/*
 		Based on the current tab, it generates a code template block:
@@ -38,6 +33,10 @@ function activate(context) {
 
 		The cursor will be in place of the placemark <cursor>
 		 */
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return
+		}
 		const line_number = editor.selection.active.line;
 		const line_text = editor.document.lineAt(line_number).text;
 		let number_of_spaces = CountSpaces(line_text);
@@ -62,6 +61,10 @@ function activate(context) {
 			
 		The cursor will be in place of the placemark <cursor>
 		 */
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return
+		}
 		const line_number = editor.selection.active.line;
 		const line_text = editor.document.lineAt(line_number).text;
 		let number_of_spaces = CountSpaces(line_text);
@@ -86,6 +89,10 @@ function activate(context) {
 			
 		The cursor will be in place of the placemark <cursor>
 		 */
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return
+		}
 		const line_number = editor.selection.active.line;
 		const line_text = editor.document.lineAt(line_number).text;
 		let number_of_spaces = CountSpaces(line_text);
@@ -110,6 +117,10 @@ function activate(context) {
 			
 		The cursor will be in place of the placemark <cursor>
 		 */
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return
+		}
 		const line_number = editor.selection.active.line;
 		const line_text = editor.document.lineAt(line_number).text;
 		let number_of_spaces = CountSpaces(line_text);
@@ -133,6 +144,10 @@ function activate(context) {
 			
 		The cursor will be in place of the placemark <cursor>
 		 */
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return
+		}
 		const line_number = editor.selection.active.line;
 		const line_text = editor.document.lineAt(line_number).text;
 		let number_of_spaces = CountSpaces(line_text);
